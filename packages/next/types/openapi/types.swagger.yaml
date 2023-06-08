@@ -1,0 +1,236 @@
+openapi: 3.0.0
+info:
+  title: Converted from types.swagger.yaml with typeconv
+  version: '1'
+  x-id: types.swagger.yaml
+  x-comment: >-
+    Generated from types/types.ts by core-types-json-schema
+    (https://github.com/grantila/core-types-json-schema) on behalf of typeconv
+    (https://github.com/grantila/typeconv)
+paths: {}
+components:
+  schemas:
+    EntityId:
+      properties:
+        id:
+          title: EntityId.id
+          type: string
+      required:
+        - id
+      additionalProperties: false
+      title: EntityId
+      type: object
+    UserIdEmail:
+      properties:
+        id:
+          title: UserIdEmail.id
+        email:
+          title: UserIdEmail.email
+      required:
+        - id
+        - email
+      additionalProperties: false
+      title: UserIdEmail
+      type: object
+    UserSearch:
+      properties:
+        id:
+          title: UserSearch.id
+          type: string
+        email:
+          title: UserSearch.email
+          type: string
+      additionalProperties: false
+      title: UserSearch
+      type: object
+    User:
+      properties:
+        id:
+          title: UserIdEmail.id
+        email:
+          title: UserIdEmail.email
+        firstname:
+          title: firstname
+        lastname:
+          title: lastname
+        password:
+          title: password
+        created_at:
+          title: created_at
+        updated_at:
+          title: updated_at
+      required:
+        - id
+        - email
+        - firstname
+        - lastname
+        - created_at
+      additionalProperties: false
+      title: User, UserIdEmail
+      type: object
+    Project:
+      properties:
+        id:
+          title: Project.id
+        name:
+          title: Project.name
+        type:
+          title: Project.type
+        subtype:
+          title: Project.subtype
+        description:
+          title: Project.description
+        icon:
+          title: Project.icon
+        color:
+          title: Project.color
+        user_id:
+          title: Project.user_id
+        parent_id:
+          title: Project.parent_id
+        created_at:
+          title: Project.created_at
+        updated_at:
+          title: Project.updated_at
+      required:
+        - id
+        - name
+        - type
+        - subtype
+        - icon
+        - color
+        - user_id
+        - parent_id
+        - created_at
+      additionalProperties: false
+      title: Project
+      type: object
+    Task:
+      properties:
+        id:
+          title: Task.id
+        name:
+          title: Task.name
+        description:
+          title: Task.description
+        priority:
+          title: Task.priority
+        deadline:
+          title: Task.deadline
+        done:
+          title: Task.done
+        project_id:
+          title: Task.project_id
+        user_id:
+          title: Task.user_id
+        created_at:
+          title: Task.created_at
+        updated_at:
+          title: Task.updated_at
+        project_name:
+          title: Task.project_name
+          type: string
+      required:
+        - id
+        - name
+        - description
+        - priority
+        - deadline
+        - done
+        - project_id
+        - user_id
+        - created_at
+        - project_name
+      additionalProperties: false
+      title: Task
+      type: object
+    Token:
+      properties:
+        accessToken:
+          title: Token.accessToken
+          type: string
+        refreshToken:
+          title: Token.refreshToken
+          type: string
+      required:
+        - accessToken
+      additionalProperties: false
+      title: Token
+      type: object
+    ProjectType:
+      enum:
+        - user
+        - system
+        - favourites
+      title: ProjectType
+      type: string
+    Profile:
+      properties:
+        id:
+          title: Profile.id
+          type: string
+        email:
+          title: Profile.email
+          type: string
+        firstname:
+          title: Profile.firstname
+          type: string
+        lastname:
+          title: Profile.lastname
+          type: string
+        defaultProject:
+          $ref: '#/components/schemas/Project'
+          title: Profile.defaultProject
+      required:
+        - id
+        - email
+        - firstname
+        - lastname
+        - defaultProject
+      additionalProperties: false
+      title: Profile
+      type: object
+    Projects:
+      properties:
+        system:
+          items:
+            $ref: '#/components/schemas/Project'
+          title: Projects.system
+          type: array
+        user:
+          items:
+            $ref: '#/components/schemas/Project'
+          title: Projects.user
+          type: array
+        favourites:
+          items:
+            $ref: '#/components/schemas/Project'
+          title: Projects.favourites
+          type: array
+      required:
+        - system
+        - user
+        - favourites
+      additionalProperties: false
+      title: Projects
+      type: object
+    Healthz:
+      properties:
+        time:
+          title: Healthz.time
+          type: string
+      required:
+        - time
+      additionalProperties: false
+      title: Healthz
+      type: object
+    Error:
+      properties:
+        error:
+          title: Error.error
+          type: string
+      required:
+        - error
+      additionalProperties: false
+      title: Error
+      type: object

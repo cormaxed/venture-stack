@@ -1,0 +1,19 @@
+{
+  "name": "@venture-stack/functions",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind vitest",
+    "typecheck": "tsc -noEmit"
+  },
+  "devDependencies": {
+    "@types/auth0": "^3.3.2",
+    "@types/aws-lambda": "^8.10.115",
+    "@types/node": "^20.1.4",
+    "sst": "^2.8.20",
+    "vitest": "^0.31.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
