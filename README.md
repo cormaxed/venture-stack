@@ -11,7 +11,7 @@ Want to get started? Check out our guides.
 * [Development Guide](./docs/DEVELOP.md)
 * [Scheme Migration](./docs/SCHEMA.md)
 * [Authentication](./docs/AUTH.md)
-* [Logging and Instrumentation](./docs/SCHEMA.md)
+* [Logging and Instrumentation](./docs/SENTRY.md)
 * [Cron and Asynchronous](./docs/CRON.md)
 
 ## Components
